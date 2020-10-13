@@ -26,7 +26,7 @@ public class ChangeRareCharacters {
         wordsToChange.add("hígado");
 
         for (String string : wordsToChange) {
-            string = m.cambiarCaracteresRarosToNormales(string);
+            string = m.removeRareCharactersFromWord(string);
             System.out.println(string);
         }
     }
@@ -38,7 +38,7 @@ public class ChangeRareCharacters {
      * @return Word with remove characters
      * @throws Exception
      */
-    private String cambiarCaracteresRarosToNormales(String wordRare) throws Exception {
+    private String removeRareCharactersFromWord(String wordRare) throws Exception {
         if (wordRare == null) {
             throw new Exception("La cadena a modificar no puede ser null");
         }
